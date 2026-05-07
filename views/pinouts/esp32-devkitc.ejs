@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESP32 DevKitC Pinout</title>
+<style>
+  body { font-family: monospace; background: #1a1a2e; color: #eee; margin: 0; padding: 2rem; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .header a { color: #0ff; text-decoration: none; }
+  .header a:hover { text-decoration: underline; }
+  pre { background: #0d1117; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-size: 0.75rem; line-height: 1.25; color: #c9d1d9; }
+  h1 { color: #0f0; }
+  .back { color: #0ff; margin-bottom: 1rem; display: inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>ESP32 DevKitC (ESP-WROOM-32)</h1>
+    <a href="/logout">Logout</a>
+  </div>
+  <a class="back" href="/dashboard">&larr; Back</a>
+<pre>
+                  ESP32 DevKitC (ESP-WROOM-32)
+                    Top View (USB up top)
+┌─────────────────────────────────────────────────────────────┐
+│                    ╔══╗  ╔══╗                              │
+│                    ╚══╝  ╚══╝                              │
+│                      [USB-UART]                            │
+│               [EN]  [BOOT]  [LED]                          │
+├─────────────────────────────────────────────────────────────┤
+│  Pin#  Left Side        |   Right Side      Pin#           │
+├──────┬──────────────────┼──────────────────┬───────────────┤
+│   1  │ 3V3              │ GND              │ 38            │
+│   2  │ EN               │ GPIO23           │ 37            │
+│   3  │ VP  (ADC1_CH0)   │ GPIO22           │ 36            │
+│   4  │ VN  (ADC1_CH3)   │ TXD0  (GPIO1)    │ 35            │
+│   5  │ GPIO34 (ADC1_CH6)│ RXD0  (GPIO3)    │ 34            │
+│   6  │ GPIO35 (ADC1_CH7)│ GPIO21           │ 33            │
+│   7  │ GPIO32 (ADC1_CH4)│ GND              │ 32            │
+│   8  │ GPIO33 (ADC1_CH5)│ GPIO19           │ 31            │
+│   9  │ GPIO25 (DAC1)    │ GPIO18           │ 30            │
+│  10  │ GPIO26 (DAC2)    │ GPIO5            │ 29            │
+│  11  │ GPIO27           │ GPIO17 (TXD1)    │ 28            │
+│  12  │ GPIO14           │ GPIO16 (RXD1)    │ 27            │
+│  13  │ GPIO12           │ GPIO4            │ 26            │
+│  14  │ GND              │ GPIO0  (BOOT)    │ 25            │
+│  15  │ GPIO13           │ GPIO2  (LED)     │ 24            │
+│  16  │ GPIO9            │ GPIO15           │ 23            │
+│  17  │ GPIO10           │ GPIO8            │ 22            │
+│  18  │ GPIO11           │ GPIO7            │ 21            │
+│  19  │ GPIO6            │ GPIO36 (ADC_IN)  │ 20            │
+├──────┴──────────────────┴──────────────────┴───────────────┤
+│                                                             │
+│   ESP32: 2x Xtensa LX6 @ 240MHz                           │
+│   520KB SRAM  4MB Flash  802.11 b/g/n + BT 4.2            │
+│   ADC: 12-bit   DAC: 2x 8-bit                              │
+│   Note: GPIO6-11 used for SPI flash (not available)        │
+│   GPIO34-39 are input-only (no pullup/pulldown)            │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+</pre>
+</div>
+</body>
+</html>

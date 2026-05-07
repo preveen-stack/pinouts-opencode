@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raspberry Pi Pico Pinout</title>
+<style>
+  body { font-family: monospace; background: #1a1a2e; color: #eee; margin: 0; padding: 2rem; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .header a { color: #0ff; text-decoration: none; }
+  .header a:hover { text-decoration: underline; }
+  pre { background: #0d1117; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-size: 0.75rem; line-height: 1.25; color: #c9d1d9; }
+  h1 { color: #0f0; }
+  .back { color: #0ff; margin-bottom: 1rem; display: inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Raspberry Pi Pico (RP2040)</h1>
+    <a href="/logout">Logout</a>
+  </div>
+  <a class="back" href="/dashboard">&larr; Back</a>
+<pre>
+                 Raspberry Pi Pico (RP2040)
+                   Top View (USB up top)
+┌─────────────────────────────────────────────────────────────┐
+│                    ╔══╗  ╔══╗                              │
+│                    ╚══╝  ╚══╝                              │
+│                        [USB]                               │
+│                       [BOOTSEL]                            │
+├─────────────────────────────────────────────────────────────┤
+│  Pin#  Left Side        |   Right Side      Pin#           │
+├──────┬──────────────────┼──────────────────┬───────────────┤
+│   1  │ GP0     (SDA)    │ VBUS             │ 40            │
+│   2  │ GP1     (SCL)    │ VSYS             │ 39            │
+│   3  │ GND              │ GND              │ 38            │
+│   4  │ GP2              │ GP28/ADC2        │ 37            │
+│   5  │ GP3              │ GP27/ADC1        │ 36            │
+│   6  │ GP4    (UART1_TX)│ GP26/ADC0        │ 35            │
+│   7  │ GP5    (UART1_RX)│ AGND             │ 34            │
+│   8  │ GND              │ GP22             │ 33            │
+│   9  │ GP6              │ GP21             │ 32            │
+│  10  │ GP7              │ GP20             │ 31            │
+│  11  │ GP8    (SPI1_TX) │ GP19             │ 30            │
+│  12  │ GP9    (SPI1_RX) │ GP18             │ 29            │
+│  13  │ GND              │ GND              │ 28            │
+│  14  │ GP10   (SPI1_SCK)│ GP17             │ 27            │
+│  15  │ GP11   (SPI1_CSn)│ GP16             │ 26            │
+│  16  │ GP12             │ GP15             │ 25            │
+│  17  │ GP13             │ GP14             │ 24            │
+│  18  │ GND              │ GND              │ 23            │
+│  19  │ GP14             │ GP13             │ 22            │
+│  20  │ GP15             │ GP12             │ 21            │
+├──────┴──────────────────┴──────────────────┴───────────────┤
+│                                                             │
+│   [LED] on GP25                                             │
+│   ADC VREF: 3.3V                                            │
+│   UART0: GP0(TX), GP1(RX)   UART1: GP4(TX), GP5(RX)       │
+│   SPI0:  GP2(TX),GP3(RX),GP6(SCK),GP7(CS)                  │
+│   SPI1:  GP8(TX),GP9(RX),GP10(SCK),GP11(CS)                │
+│   I2C0:  GP0(SDA),GP1(SCL)  I2C1: GP2(SDA),GP3(SCL)       │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STM32 Black Pill Pinout</title>
+<style>
+  body { font-family: monospace; background: #1a1a2e; color: #eee; margin: 0; padding: 2rem; }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .header a { color: #0ff; text-decoration: none; }
+  .header a:hover { text-decoration: underline; }
+  pre { background: #0d1117; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-size: 0.8rem; line-height: 1.3; color: #c9d1d9; }
+  h1 { color: #0f0; }
+  .back { color: #0ff; margin-bottom: 1rem; display: inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>STM32 Black Pill (STM32F401CCU6)</h1>
+    <a href="/logout">Logout</a>
+  </div>
+  <a class="back" href="/dashboard">&larr; Back</a>
+<pre>
+                     STM32F401CCU6 Black Pill
+                         Top View (USB up)
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│  ╔══╗  ╔══╗         [USB-C]                     ╔══╗  ╔══╗  │
+│  ╚══╝  ╚══╝                                   ╚══╝  ╚══╝  │
+│                                                             │
+│ ┌─────────────────────────────────────────────────────────┐ │
+│ │                     TOP HEADERS                         │ │
+│ ├──────┬──────────────────────────────────────┬───────────┤ │
+│ │ PB9  │ I2C1_SDA        TIM17_CH1           │ VBUS      │ │
+│ │ PB8  │ I2C1_SCL        TIM16_CH1           │ VSYS/3V3  │ │
+│ │ PB7  │ SPI1_MISO       TIM4_CH2            │ GND       │ │
+│ │ PB6  │ SPI1_MOSI       TIM4_CH1            │ 3V3_OUT   │ │
+│ │ PB5  │ SPI1_SCK        TIM3_CH2            │ NRST      │ │
+│ │ PB4  │ SPI1_NSS        TIM3_CH1            │ GND       │ │
+│ │ PB3  │ SWO             TIM2_CH2            │ VBAT      │ │
+│ │ PA15 │ JTDI            TIM2_CH1            │ PA12/USBDP│ │
+│ │ PA12 │ USB_DP          TIM1_ETR            │ PA11/USBDM│ │
+│ │ PA11 │ USB_DM          TIM1_CH4            │ PA10/RX   │ │
+│ │ PA10 │ USART1_RX       TIM1_CH3            │ PA9/TX    │ │
+│ │ PA9  │ USART1_TX       TIM1_CH2            │ PA8/MCO   │ │
+│ │ PA8  │ MCO             TIM1_CH1            │ PB15      │ │
+│ │ PB15 │ SPI2_MOSI       TIM1_CH3N           │ PB14      │ │
+│ │ PB14 │ SPI2_SCK        TIM1_CH2N           │ PB13      │ │
+│ │ PB13 │ SPI2_NSS        TIM1_CH1N           │ PB12      │ │
+│ │ PB12 │ SPI2_MISO       TIM1_BKIN           │ PB11      │ │
+│ │ PB11 │ I2C2_SDA        TIM2_CH4            │ PB10      │ │
+│ │ PB10 │ I2C2_SCL        TIM2_CH3            │ PA0/A0    │ │
+│ │ PA0  │ ADC1_IN0        TIM2_CH1_ETR        │ PA1/A1    │ │
+│ │ PA1  │ ADC1_IN1        TIM2_CH2            │ PA2/A2    │ │
+│ │ PA2  │ ADC1_IN2        TIM2_CH3            │ PA3/A3    │ │
+│ │ PA3  │ ADC1_IN3        TIM2_CH4            │ PA4/A4    │ │
+│ │ PA4  │ DAC_OUT1        SPI1_NSS            │ PA5/A5    │ │
+│ │ PA5  │ DAC_OUT2        SPI1_SCK            │ PA6/A6    │ │
+│ │ PA6  │ ADC1_IN6        TIM3_CH1            │ PA7/A7    │ │
+│ │ PA7  │ ADC1_IN7        TIM3_CH2            │ PB0/B0    │ │
+│ │ PB0  │ ADC1_IN8        TIM3_CH3            │ PB1/B1    │ │
+│ │ PB1  │ ADC1_IN9        TIM3_CH4            │ PB2/BOOT1│ │
+│ ├──────┴──────────────────────────────────────┴───────────┤ │
+│ │                   BOTTOM HEADERS                        │ │
+│ └─────────────────────────────────────────────────────────┘ │
+│                                                             │
+│   [BOOT0]                                    [LED PC13]    │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+</pre>
+</div>
+</body>
+</html>

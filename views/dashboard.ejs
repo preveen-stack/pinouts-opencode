@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Board Pinouts</title>
+<style>
+  body { font-family: monospace; background: #1a1a2e; color: #eee; margin: 0; padding: 2rem; }
+  .container { max-width: 800px; margin: 0 auto; }
+  h1 { color: #0f0; }
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+  .header a { color: #f44; text-decoration: none; }
+  .header a:hover { text-decoration: underline; }
+  .board-list { list-style: none; padding: 0; }
+  .board-list li { margin-bottom: 1rem; }
+  .board-list a { display: block; padding: 1rem; background: #16213e; color: #0ff; text-decoration: none; border-radius: 6px; font-size: 1.1rem; }
+  .board-list a:hover { background: #0f3460; transform: translateX(4px); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>MCU Board Pinouts</h1>
+    <a href="/logout">Logout</a>
+  </div>
+  <p>Logged in as: <strong><%= user.username %></strong></p>
+  <p>Select a board to view its pinout diagram:</p>
+  <ul class="board-list">
+    <% boards.forEach(b => { %>
+      <li><a href="/pinout/<%= b.slug %>"><%= b.name %></a></li>
+    <% }) %>
+  </ul>
+</div>
+</body>
+</html>
